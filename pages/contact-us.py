@@ -2,9 +2,10 @@ from dash import html, register_page  #, callback # If you need callbacks, impor
 
 register_page(
     __name__,
-    name='Page 3',
-    top_nav=True,
-    path='/page3'
+    name='Contact Us',
+    path='/contact-us',
+    title='Contact Us',
+    description='AANB App Contact Us Page'
 )
 
 
@@ -12,7 +13,7 @@ def layout():
     layout = html.Div([
         html.H1(
             [
-                "Page 3"
+                "Contact Us Page"
             ]
         )
     ])
