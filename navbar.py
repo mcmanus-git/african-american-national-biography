@@ -11,7 +11,7 @@ def create_navbar():
                         html.I(className="fa-brands fa-github"),  # Font Awesome Icon
                         " "  # Text beside icon
                     ],
-                    href="[YOUR GITHUB PROFILE URL]",
+                    href="https://github.com/mcmanus-git",
                     target="_blank"
                 )
 
@@ -22,7 +22,7 @@ def create_navbar():
                         html.I(className="fa-brands fa-medium"),  # Font Awesome Icon
                         " "  # Text beside icon
                     ],
-                    href="[YOUR MEDIUM PROFILE URL]",
+                    href="https://medium.com/@mcmanus_data_works",
                     target="_blank"
                 )
 
@@ -33,7 +33,7 @@ def create_navbar():
                         html.I(className="fa-brands fa-linkedin"),  # Font Awesome Icon
                         " "  # Text beside icon
                     ],
-                    href="[YOUR LINKEDIN PROFILE URL]",
+                    href="https://www.linkedin.com/in/michael-mcmanus/",
                     target="_blank"
                 )
 
@@ -46,8 +46,8 @@ def create_navbar():
                 children=[  # Add as many menu items as you need
                     dbc.DropdownMenuItem("Home", href='/'),
                     dbc.DropdownMenuItem(divider=True),
-                    dbc.DropdownMenuItem("Page 2", href='/page2'),
-                    dbc.DropdownMenuItem("Page 3", href='/page3'),
+                    dbc.DropdownMenuItem("About", href='/about'),
+                    dbc.DropdownMenuItem("Contact Us", href='/contact-us'),
                 ],
             ),
         ],
