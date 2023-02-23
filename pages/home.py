@@ -12,7 +12,7 @@ def layout():
     layout = html.Div([
         html.H1(
             [
-                "Home Page"
+                "African American National Biography Data Exploration"
             ]
         )
     ])
