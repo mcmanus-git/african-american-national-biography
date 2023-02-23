@@ -3,8 +3,9 @@ from dash import html, register_page  #, callback # If you need callbacks, impor
 register_page(
     __name__,
     name='About',
-    top_nav=True,
-    path='/about'
+    path='/about',
+    title="About",
+    description="AANB App About Page.",
 )
 
 
