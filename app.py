@@ -2,6 +2,9 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from navbar import create_navbar
+from dash_bootstrap_templates import load_figure_template
+
+load_figure_template('LUX')
 
 # Toggle the themes at [dbc.themes.LUX]
 # The full list of available themes is:
