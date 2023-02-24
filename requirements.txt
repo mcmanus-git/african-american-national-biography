@@ -5,3 +5,4 @@ dash-bootstrap-templates
 gunicorn
 folium
 brotli
+plotly
