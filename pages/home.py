@@ -3,7 +3,7 @@ from visualizations.create_vis import create_visualizations
 
 register_page(
     __name__,
-    name='Home',
+    name='AANB Data Exploration',
     top_nav=True,
     path='/'
 )
