@@ -1,4 +1,5 @@
-from dash import html, register_page  #, callback # If you need callbacks, import it here.
+from dash import html, register_page, dcc  #, callback # If you need callbacks, import it here.
+from visualizations.create_vis import create_visualizations
 
 register_page(
     __name__,
@@ -8,6 +9,9 @@ register_page(
 )
 
 
+life_expectancy_vis = create_visualizations()
+
+
 def layout():
     layout = html.Div(
         [
@@ -15,7 +19,8 @@ def layout():
                 [
                     "African American National Biography Data Exploration"
                 ]
-            )
+            ),
+            dcc.Graph(figure=life_expectancy_vis)
         ],
         style={
             'padding': '5% 5% 5% 5%'
