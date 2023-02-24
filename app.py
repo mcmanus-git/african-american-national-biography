@@ -14,7 +14,7 @@ from navbar import create_navbar
 NAVBAR = create_navbar()
 # To use Font Awesome Icons
 FA621 = "https://use.fontawesome.com/releases/v6.2.1/css/all.css"
-APP_TITLE = "First Dash App"
+APP_TITLE = "African American National Biography Data Exploration"
 
 app = dash.Dash(
     __name__,
