@@ -10,6 +10,7 @@ register_page(
 
 def layout():
     layout = html.Div([
+        html.Div([html.Img(src='../assets/henry-be--Pg63JThyCg-unsplash.jpg')], style={'width': '100%'}),
         html.H1(
             [
                 "African American National Biography Data Exploration"
