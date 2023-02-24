@@ -66,7 +66,7 @@ def create_navbar():
             )
         ],
         style={
-            'background-image': 'url(/assets/library-of-congress-WzPxmB_tRlw-unsplash.jpg)',
+            'background-image': 'url(/assets/app.jpg)',
             'background-size': 'cover',
             'height': '50vh',
         }
