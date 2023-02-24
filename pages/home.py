@@ -9,11 +9,16 @@ register_page(
 
 
 def layout():
-    layout = html.Div([
-        html.H1(
-            [
-                "African American National Biography Data Exploration"
-            ]
-        )
-    ])
+    layout = html.Div(
+        [
+            html.H1(
+                [
+                    "African American National Biography Data Exploration"
+                ]
+            )
+        ],
+        style={
+            'padding': '5% 5% 5% 5%'
+        }
+    )
     return layout
