@@ -56,7 +56,8 @@ def create_religion_vis(df, neut_clr, hlt_clr):
         ),
         x='Number of People',
         y='Religion',
-        orientation='h'
+        orientation='h',
+        height=600
     )
 
     religion_vis.update_traces(
