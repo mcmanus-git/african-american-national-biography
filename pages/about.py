@@ -34,7 +34,22 @@ line_break = html.Div([dcc.Markdown("""___""")], style={'margin': '5% 0% 5% 0%'}
 
 data_sources_header = html.H3('Data Sources', style={'textAlign': 'center'})
 data_sources = dcc.Markdown('''  
-Data sources used>
+#### Overview
+The [Enslaved People in the African American National Biography, 1508-1865](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIEYGJ) dataset is derived from the [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) by [Steven J. Niven](https://hutchinscenter.fas.harvard.edu/people/steven-j-niven).
+
+#### Data Cleaning and Presentation
+
+As records were hand recorded, significant data cleaning was necessary to enable aggregation of information found 
+therein. All data cleaning methods are documented in a 
+[Jupyter Notebook](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data_pipelines/data%20cleaning%20eda.ipynb) 
+hosted in the 
+[Project Repository on GitHub](https://github.com/mcmanus-git/african-american-national-biography) 
+as well as both the 
+[raw dataset](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data/AANB-Data-Final-Revised20210414.csv) 
+and the 
+[cleaned dataset](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data/aanb_data_clean.pkl)
+ for reference and reproducibility. Data contents and dictionary are explained fully in the 
+ [documentation](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data/AANB-Documentation-Final20201221.xlsx).
 ''')
 
 creator_header = html.H1('About the Creator', style={'textAlign': 'center'})
