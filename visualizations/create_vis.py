@@ -1,5 +1,6 @@
 import pandas as pd
 from visualizations.vis_life_expectancy import create_vis_life_expectancy
+from visualizations.vis_education import create_total_education_vis
 
 
 def create_visualizations():
@@ -7,5 +8,7 @@ def create_visualizations():
 
     le_vis = create_vis_life_expectancy(df)
 
-    return le_vis
+    ed_total_vis = create_total_education_vis(df)
+
+    return le_vis, ed_total_vis
 
