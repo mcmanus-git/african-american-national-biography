@@ -29,3 +29,34 @@ def create_runaway_rebel_vis(df):
 
     return rr_vis
 
+
+def create_religion_vis(df):
+    religion_vis = px.bar(
+        (
+            df['religion_clean']
+            .value_counts()
+            .reset_index()
+            .rename(
+                {
+                    'index': 'Religion',
+                    'religion_clean': 'Number of People'
+                },
+                axis=1
+            )
+            .sort_values(
+                'Number of People'
+            )
+        ),
+        x='Number of People',
+        y='Religion',
+        orientation='h'
+    )
+
+    religion_vis.update_layout(
+        title={
+            'text': 'Religious Affiliation',
+            'x': 0.5
+        }
+    )
+
+    return religion_vis

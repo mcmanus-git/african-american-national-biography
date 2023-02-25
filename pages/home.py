@@ -9,7 +9,7 @@ register_page(
 )
 
 
-life_expectancy_vis, education_total_vis, ever_enslaved_vis, before_thirteenth_vis, runaways_rebels_vis = create_visualizations()
+life_expectancy_vis, education_total_vis, ever_enslaved_vis, before_thirteenth_vis, runaways_rebels_vis, religion_vis = create_visualizations()
 
 
 def layout():
@@ -25,6 +25,7 @@ def layout():
             dcc.Graph(figure=ever_enslaved_vis),
             dcc.Graph(figure=before_thirteenth_vis),
             dcc.Graph(figure=runaways_rebels_vis),
+            dcc.Graph(figure=religion_vis),
         ],
         style={
             'padding': '5% 5% 5% 5%'
