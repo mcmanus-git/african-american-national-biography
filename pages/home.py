@@ -9,7 +9,7 @@ register_page(
 )
 
 
-life_expectancy_vis, education_total_vis = create_visualizations()
+life_expectancy_vis, education_total_vis, ever_enslaved_vis = create_visualizations()
 
 
 def layout():
@@ -22,6 +22,7 @@ def layout():
             ),
             dcc.Graph(figure=life_expectancy_vis),
             dcc.Graph(figure=education_total_vis),
+            dcc.Graph(figure=ever_enslaved_vis),
         ],
         style={
             'padding': '5% 5% 5% 5%'
