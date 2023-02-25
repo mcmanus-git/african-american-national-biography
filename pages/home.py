@@ -8,8 +8,18 @@ register_page(
     path='/'
 )
 
+# Create Visualizations
+life_expectancy_vis, \
+    education_total_vis, \
+    ever_enslaved_vis, \
+    before_thirteenth_vis, \
+    runaways_rebels_vis, \
+    religion_vis \
+    = create_visualizations()
 
-life_expectancy_vis, education_total_vis, ever_enslaved_vis, before_thirteenth_vis, runaways_rebels_vis, religion_vis = create_visualizations()
+vis_style = {
+    'padding': '5% 0% 5% 0%'
+}
 
 
 def layout():
@@ -20,12 +30,42 @@ def layout():
                     "African American National Biography Data Exploration"
                 ]
             ),
-            dcc.Graph(figure=life_expectancy_vis),
-            dcc.Graph(figure=education_total_vis),
-            dcc.Graph(figure=ever_enslaved_vis),
-            dcc.Graph(figure=before_thirteenth_vis),
-            dcc.Graph(figure=runaways_rebels_vis),
-            dcc.Graph(figure=religion_vis),
+            html.Div(
+                [
+                    dcc.Graph(figure=life_expectancy_vis),
+                ],
+                style=vis_style
+            ),
+            html.Div(
+                [
+                    dcc.Graph(figure=education_total_vis),
+                ],
+                style=vis_style
+            ),
+            html.Div(
+                [
+                    dcc.Graph(figure=ever_enslaved_vis),
+                ],
+                style=vis_style
+            ),
+            html.Div(
+                [
+                    dcc.Graph(figure=before_thirteenth_vis),
+                ],
+                style=vis_style
+            ),
+            html.Div(
+                [
+                    dcc.Graph(figure=runaways_rebels_vis),
+                ],
+                style=vis_style
+            ),
+            html.Div(
+                [
+                    dcc.Graph(figure=religion_vis),
+                ],
+                style=vis_style
+            ),
         ],
         style={
             'padding': '5% 5% 5% 5%'
