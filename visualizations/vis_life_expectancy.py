@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 
 
-def create_vis_life_expectancy(df):
+def create_vis_life_expectancy(df, neut_clr, hlt_clr):
     min_n_records = 2
     birthyear_counts = (
         df[df['birthYearClean'] < 9999]['birthYearClean']
@@ -36,6 +36,10 @@ def create_vis_life_expectancy(df):
         x='Birth Year',
         y='Age',
         color='Ever Enslaved',
+        color_discrete_map={
+            'Yes': hlt_clr,
+            'No': neut_clr
+        }
     )
     avg_life_exp.update_layout(
         title={

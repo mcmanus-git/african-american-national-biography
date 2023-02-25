@@ -1,7 +1,7 @@
 import plotly.express as px
 
 
-def create_runaway_rebel_vis(df):
+def create_runaway_rebel_vis(df, neut_clr, hlt_clr):
 
     rr_vis = px.bar(
         (
@@ -17,20 +17,27 @@ def create_runaway_rebel_vis(df):
             )
         ),
         x='Runaway or Rebel',
-        y='Number of People'
+        y='Number of People',
+        color='Runaway or Rebel',
+        color_discrete_map={
+            'Yes': hlt_clr,
+            'No': neut_clr,
+            'Unknown': neut_clr
+        }
     )
 
     rr_vis.update_layout(
         title={
             'text': 'People Identified as Runaways or Rebels',
             'x': 0.5
-        }
+        },
+        showlegend=False
     )
 
     return rr_vis
 
 
-def create_religion_vis(df):
+def create_religion_vis(df, neut_clr, hlt_clr):
     religion_vis = px.bar(
         (
             df['religion_clean']
@@ -50,6 +57,10 @@ def create_religion_vis(df):
         x='Number of People',
         y='Religion',
         orientation='h'
+    )
+
+    religion_vis.update_traces(
+        marker_color=neut_clr
     )
 
     religion_vis.update_layout(
