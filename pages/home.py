@@ -41,7 +41,15 @@ def layout():
                     'text-align': 'center'
                 }
             ),
-            dcc.Markdown("""This dashboard is an exploration of a subset of data taken from the [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) of over 1,300 people who lived prior to ratification of The 13th Amendment of the United States Constitution between the years 1508-1865. For more information about the dataset please see our [About Page](/about)."""),
+            dcc.Markdown(
+                """This dashboard is an exploration of a subset of data taken from the 
+                [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) of over 1,300 people 
+                who lived prior to ratification of The 13th Amendment of the United States Constitution between the 
+                years 1508-1865. For more information about the dataset please see our [About Page](/about).""",
+                style={
+                    'padding': '5% 5% 5% 5%'
+                }
+            ),
             html.Div(
                 [
                     dcc.Graph(figure=life_expectancy_vis),
