@@ -32,11 +32,32 @@ header = html.H1('About', style={'textAlign': 'center'})
 line_break = html.Div([dcc.Markdown("""___""")], style={'margin': '5% 0% 5% 0%'})
 
 
-data_sources_header = html.H3('Data Sources', style={'textAlign': 'center'})
-data_sources = dcc.Markdown('''  
+data_sources_header = html.H3('-Data Source-', style={'textAlign': 'center'})
+data_sources = dcc.Markdown('''
 #### Overview
-The [Enslaved People in the African American National Biography, 1508-1865](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIEYGJ) dataset is derived from the [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) by [Steven J. Niven](https://hutchinscenter.fas.harvard.edu/people/steven-j-niven).
+The [Enslaved People in the African American National Biography, 1508-1865](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIEYGJ) 
+dataset is derived from the [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) 
+by [Steven J. Niven](https://hutchinscenter.fas.harvard.edu/people/steven-j-niven) and contains records of over 1,300 
+people who lived prior to ratification of The 13th Amendment of the United States Constitution between the 
+years 1508-1865.
+<br>
+#### Considerations While Exploring this Data  
 
+While exploring the visualizations on the home page, please keep in mind this is but a subset of all African 
+American people living during this time and includes records of approximately 1,300 people. Of these 
+1,300 records, many are incomplete. As such, it is impossible to make 
+concrete inferences between these accounts and what life may have been truly like for African Americans
+during this time in aggregate.  
+<br>
+For instance, you'll notice in the visualization below that 651 individuals have been recorded as 
+having ever been enslaved. Of the 1,300 records, this is roughly 50%. It is unlikely this is an accurate
+ ratio as, according to the Trans-Atlantic Slave Trade Database estimates, 388,000 Africans were 
+transported directly to the United States to be sold as slaves 
+[[1]](https://www.pbs.org/wnet/african-americans-many-rivers-to-cross/history/how-many-slaves-landed-in-the-us/). 
+As you can see, 1,300 biographies of African Americans during the same time period is only 0.3% of just
+those who were transported to the United States directly from Africa. Therefore, it is unsafe to assume 
+the same ratios will be applicable universally.  
+<br>
 #### Data Cleaning and Presentation
 
 As records were hand recorded, significant data cleaning was necessary to enable aggregation of information found 
@@ -50,7 +71,9 @@ and the
 [cleaned dataset](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data/aanb_data_clean.pkl)
  for reference and reproducibility. Data contents and dictionary are explained fully in the 
  [documentation](https://github.com/mcmanus-git/african-american-national-biography/blob/main/data/AANB-Documentation-Final20201221.xlsx).
-''')
+''',
+dangerously_allow_html=True
+)
 
 creator_header = html.H1('About the Creator', style={'textAlign': 'center'})
 contact_creator_header = html.H4('-   Contact Me   -', style={'textAlign': 'center'})

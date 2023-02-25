@@ -42,10 +42,15 @@ def layout():
                 }
             ),
             dcc.Markdown(
-                """This dashboard is an exploration of a subset of data taken from the 
+                """This dashboard is an exploration of a subset of data derived from the 
                 [African American National Biography](https://hutchinscenter.fas.harvard.edu/AANB) of over 1,300 people 
                 who lived prior to ratification of The 13th Amendment of the United States Constitution between the 
-                years 1508-1865. For more information about the dataset please see our [About Page](/about).""",
+                years 1508-1865. Below you will find some visualizations which aim to gain a clearer picture of people
+                living during this time. If you would like a more detailed view of individuals, please visit the 
+                [Biographies Page](/bios). 
+                ***Prior to exploring this data and for more information about the dataset please see our*** 
+                [About Page](/about).""",
+                dangerously_allow_html=True,
                 style={
                     'padding': '5% 5% 5% 5%'
                 }
