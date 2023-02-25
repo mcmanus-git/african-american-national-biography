@@ -14,10 +14,9 @@ def create_navbar():
                                 html.I(className="fa-brands fa-github"),  # Font Awesome Icon
                                 " "  # Text beside icon
                             ],
-                            href="https://github.com/mcmanus-git",
+                            href="https://github.com/mcmanus-git/african-american-national-biography",
                             target="_blank"
                         )
-
                     ),
                     dbc.NavItem(
                         dbc.NavLink(
@@ -28,7 +27,6 @@ def create_navbar():
                             href="https://medium.com/@mcmanus_data_works",
                             target="_blank"
                         )
-
                     ),
                     dbc.NavItem(
                         dbc.NavLink(
@@ -39,7 +37,6 @@ def create_navbar():
                             href="https://www.linkedin.com/in/michael-mcmanus/",
                             target="_blank"
                         )
-
                     ),
                     dbc.DropdownMenu(
                         nav=True,
