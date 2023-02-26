@@ -82,8 +82,12 @@ def layout():
         [
             html.H1(
                 [
-                    "Biographies Page - Coming Soon"
-                ]
+                    "Enslaved People in the African American National Biography, 1508-1865"
+                ],
+                style={
+                    'padding': '5% 0% 5% 0%',
+                    'text-align': 'center'
+                }
             ),
             dcc.Dropdown(
                 BIO_LIST,
