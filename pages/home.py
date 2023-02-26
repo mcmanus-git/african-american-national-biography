@@ -5,7 +5,8 @@ register_page(
     __name__,
     name='AANB Data Exploration',
     top_nav=True,
-    path='/'
+    path='/',
+    description="African American National Biography Data Exploration"
 )
 
 # Create Visualizations
